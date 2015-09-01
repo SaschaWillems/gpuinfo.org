@@ -8,7 +8,7 @@
 		<meta name="author" content="Sascha Willems">		
 		<title>GPU hardware info database launchpad</title>
 		<link href="./external/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="style.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">		
 	</head>
 	
 	<body>
@@ -24,12 +24,12 @@
 				</div>						
 				
 				<div class="container marketing">
-				
+					
 					
 					<div class="row featurette">
 						<div class="col-md-7 col-md-push-5">
 							<h2 class="featurette-heading">OpenGL</h2>
-							<h3> <span class="text-muted">Reports online : xxx</span></h3>
+							<a href="http://opengl.delphigl.de" target="_blank"><h3><span class="text-muted reportcount-gl">Reports online :&nbsp;</span></h3></a>
 							<p class="lead infotext">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
 						</div>
 						<div class="col-md-5 col-md-pull-7">
@@ -42,7 +42,7 @@
 					<div class="row featurette">
 						<div class="col-md-7">
 							<h2 class="featurette-heading">OpenGL ES</h2>
-							<h3> <span class="text-muted">Reports online : xxx</span></h3>
+							<a href="http://opengles.delphigl.de" target="_blank"><h3> <span class="text-muted reportcount-gles">Reports online :&nbsp;</span></h3></a>
 							<p class="lead infotext">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
 						</div>
 						<div class="col-md-5">
@@ -77,14 +77,45 @@
 					</footer>
 					
 				</div>
-								
+				
 			</div>
 			
 		</div>
 		
-		<script src="./external/jquery-2.1.4.min.js"></script>
 		<script src="./external/bootstrap/js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="./external/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+		
+		<script src="./external/jquery-2.1.4.min.js"></script>		
+		<script>
+			$(document).ready(function() {
+				// OpenGL report count
+				$.ajax({
+					url: "http://opengl.delphigl.de/services/gl_getreportcount.php",
+					type: "POST",
+					crossDomain: true,
+					dataType: "jsonp",
+					jsonp: false,
+					jsonpCallback: "jsoncallback",					
+					}).then(function(data) {
+					$('.reportcount-gl').append(data.count);
+					
+					// OpenGL ES report count
+					$.ajax({
+						url: "http://delphigl.de/glcapsviewer/services/gles_getreportcount.php",
+						type: "POST",
+						crossDomain: true,
+						dataType: "jsonp",
+						jsonp: false,
+						jsonpCallback: "jsoncallback",					
+						}).then(function(data) {
+							$('.reportcount-gles').append(data.count);
+					});			
+					
+					
+				});
+			});
+		</script>		
+		
 	</body>
 </html>
