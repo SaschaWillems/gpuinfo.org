@@ -1,0 +1,50 @@
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 0px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.featurette-divider {
+  margin: 40px 0; 
+}
+
+.featurette-heading {
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 10px;
+	font-size: 42px;
+  }
+}
+
+.copyrightexternal {
+	font-size: smaller;
+}
+
+.infotext {
+	font-size: 16px;
+}
+
+.page-header {
+	margin-top:-20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FAFAFA;
+}
