@@ -1,7 +1,7 @@
 # gpuinfo.org
 
 ## About
-Source for the GPU hardware databases launch page over at gpuinfo.org
+Source for the GPU hardware databases launch page over at http://www.gpuinfo.org
 
 ## Externals
 - Bootstrap
