@@ -3,6 +3,10 @@ body {
   color: #5a5a5a;
 }
 
+.content {
+	padding-top:65px;
+}
+
 .marketing .col-lg-4 {
   margin-bottom: 0px;
   text-align: center;
@@ -16,7 +20,7 @@ body {
 }
 
 .featurette-divider {
-  margin: 40px 0; 
+  margin: 25px 0; 
 }
 
 .featurette-heading {

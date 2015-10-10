@@ -12,17 +12,34 @@
 	</head>
 	
 	<body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> 
+		  </button>
+		  <a href="www.gpuinfo.org">
+			<img src="./images/gpuinfo.png" height="48px">
+		  </a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+			<li><a href="http://opengl.gpuinfo.org">OpenGL</a></li>
+			<li><a href="http://opengles.gpuinfo.org">OpenGL ES</a></li> 
+			<li><a href="http://vulkan.gpuinfo.org">Vulkan</a></li> 
+			<li><a href="./about.html">About</a></li> 
+		  </ul>
+		</div>
+	  </div>
+	</nav>	
 		
-		<div class="site-wrapper">
+		<div class="site-wrapper content">
 			
 			<div class="site-wrapper-inner">
-				
-				<div class="page-header header">
-					<h1>About</h1>
-					<div>
-						This is the launchpad for my GPU hardware databases targeting the open graphics API of <a href="http:///www.khronos.org">Khronos</a>. They're aimed at developers that need to know what features are supported by a driver/GPU combination or to check how widespread certain features are.<br/>
-					</div>	
-				</div>						
+								
 				
 				<div class="container marketing">
 					
@@ -34,20 +51,20 @@
 							<p class="lead infotext">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
 						</div>
 						<div class="col-md-5 col-md-pull-7">
-							<a href="http://opengl.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengl.png" alt="Generic placeholder image"></a>
+							<a href="http://opengl.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" width="85%" src="./images/opengl.png" alt="Generic placeholder image"></a>
 						</div>
 					</div>
 					
 					<hr class="featurette-divider">
 					
 					<div class="row featurette">
-						<div class="col-md-7">
+						<div class="col-md-7 col-md-push-5">
 							<h2 class="featurette-heading">OpenGL ES</h2>
 							<a href="http://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles">Reports online :&nbsp;</span></h3></a>
 							<p class="lead infotext">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
 						</div>
-						<div class="col-md-5">
-							<a href="http://opengles.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengles.png" alt="Generic placeholder image"></a>
+						<div class="col-md-5 col-md-pull-7">
+							<a href="http://opengles.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block"  width="85%" src="./images/opengles.png" alt="Generic placeholder image"></a>
 						</div>
 					</div>
 					
@@ -61,7 +78,7 @@
 							Hardware database (and capability viewer) will be released shortly after Vulkan launches...</p>
 						</div>
 						<div class="col-md-5 col-md-pull-7 vertical-align">
-							<img class="featurette-image img-responsive center-block" src="./images/vulkan.png" alt="Generic placeholder image">
+							<img class="featurette-image img-responsive center-block" src="./images/vulkan.png" width="85%"  alt="Generic placeholder image">
 						</div>
 					</div>
 					
@@ -83,11 +100,9 @@
 			
 		</div>
 		
-		<script src="./external/bootstrap/js/bootstrap.min.js"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="./external/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
-		
 		<script src="./external/jquery-2.1.4.min.js"></script>		
+		<script src="./external/bootstrap/js/bootstrap.min.js"></script>
+		
 		<script>
 			$(document).ready(function() {
 				// OpenGL report count
