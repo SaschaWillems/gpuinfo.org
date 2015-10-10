@@ -1,6 +1,8 @@
 # gpuinfo.org
 
 ## About
+<img src="/images/gpuinfo.png" width="256px">
+
 Source for the GPU hardware databases launch page over at http://www.gpuinfo.org
 
 ## Externals
