@@ -19,8 +19,9 @@
 				
 				<div class="page-header header">
 					<h1>About</h1>
-					<p>This is the launchpad for my GPU hardware databases targeting the open graphics API of <a href="http:///www.khronos.org">Khronos</a>. They're aimed at developers that need to know what features are supported by a driver/GPU combination or to check how widespread certain features are.<br/>
-					Details on who I am and why I do this <a href="./about.html">here</a>.</p>	
+					<div>
+						This is the launchpad for my GPU hardware databases targeting the open graphics API of <a href="http:///www.khronos.org">Khronos</a>. They're aimed at developers that need to know what features are supported by a driver/GPU combination or to check how widespread certain features are.<br/>
+					</div>	
 				</div>						
 				
 				<div class="container marketing">
@@ -29,11 +30,11 @@
 					<div class="row featurette">
 						<div class="col-md-7 col-md-push-5">
 							<h2 class="featurette-heading">OpenGL</h2>
-							<a href="http://opengl.delphigl.de" target="_blank"><h3><span class="text-muted reportcount-gl">Reports online :&nbsp;</span></h3></a>
+							<a href="http://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-gl">Reports online :&nbsp;</span></h3></a>
 							<p class="lead infotext">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
 						</div>
 						<div class="col-md-5 col-md-pull-7">
-							<a href="http://opengl.delphigl.de" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengl.png" alt="Generic placeholder image"></a>
+							<a href="http://opengl.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengl.png" alt="Generic placeholder image"></a>
 						</div>
 					</div>
 					
@@ -42,11 +43,11 @@
 					<div class="row featurette">
 						<div class="col-md-7">
 							<h2 class="featurette-heading">OpenGL ES</h2>
-							<a href="http://opengles.delphigl.de" target="_blank"><h3> <span class="text-muted reportcount-gles">Reports online :&nbsp;</span></h3></a>
+							<a href="http://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles">Reports online :&nbsp;</span></h3></a>
 							<p class="lead infotext">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
 						</div>
 						<div class="col-md-5">
-							<a href="http://opengles.delphigl.de" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengles.png" alt="Generic placeholder image"></a>
+							<a href="http://opengles.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/opengles.png" alt="Generic placeholder image"></a>
 						</div>
 					</div>
 					
@@ -91,7 +92,7 @@
 			$(document).ready(function() {
 				// OpenGL report count
 				$.ajax({
-					url: "http://opengl.delphigl.de/services/gl_getreportcount.php",
+					url: "http://opengl.gpuinfo.org/services/gl_getreportcount.php",
 					type: "POST",
 					crossDomain: true,
 					dataType: "jsonp",
@@ -102,7 +103,7 @@
 					
 					// OpenGL ES report count
 					$.ajax({
-						url: "http://delphigl.de/glcapsviewer/services/gles_getreportcount.php",
+						url: "http://opengles.gpuinfo.org/services/getreportcount.php",
 						type: "POST",
 						crossDomain: true,
 						dataType: "jsonp",
