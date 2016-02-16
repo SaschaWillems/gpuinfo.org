@@ -12,126 +12,121 @@
 	</head>
 	
 	<body>
-	
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span> 
-		  </button>
-		  <a href="/">
-			<img src="./images/gpuinfo.png" height="48px">
-		  </a>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav">
-			<li><a href="http://opengl.gpuinfo.org">OpenGL</a></li>
-			<li><a href="http://opengles.gpuinfo.org">OpenGL ES</a></li> 
-			<li><a href="http://vulkan.gpuinfo.org">Vulkan</a></li> 
-			<li><a href="./about.html">About</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>	
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a href="/">
+					<img src="./images/gpuinfo.png" height="48px">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="http://opengl.gpuinfo.org">OpenGL</a></li>
+						<li><a href="http://opengles.gpuinfo.org">OpenGL ES</a></li> 
+						<li><a href="http://vulkan.gpuinfo.org">Vulkan</a></li> 
+						<li><a href="./about.html">About</a></li> 
+					</ul>
+				</div>
+			</div>
+		</nav>	
 		
 		<div class="site-wrapper content">
 			
 			<div class="site-wrapper-inner">
-								
 				
-				<div class="container marketing">
-					
-					<div class="row featurette">
-						<div class="col-md-7 col-md-push-5">
-							<h2 class="featurette-heading">Vulkan</h2>
-							<a href="http://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-vk">Reports online : coming soon</span></h3></a>
-							<p class="lead infotext">Vulkan is the new generation, open standard API for high-efficiency access to graphics and compute on modern GPUs, available on desktop and mobile platforms.<br/><br/>
-							Hardware database (and capability viewer) will be released shortly after Vulkan launches...</p>
+				<div class="container">
+					<div class="jumbotron">
+						<center>
+						<a href="about.html"><img src="./images/gpuinfo.png" class="img-responsive" width="320px"></a>
+						</center>
+					</div>
+					<div class="row">
+						<div class="col-sm-4" style="vertical-align:middle;">
+							<a href="http://opengl.gpuinfo.org" target="_blank"><img src="./images/opengl.png" class="img-responsive"></a>
 						</div>
-						<div class="col-md-5 col-md-pull-7 vertical-align">
-							<a href="http://vulkan.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" src="./images/vulkan.png" width="85%"  alt="Generic placeholder image"></a>
+						<div class="col-sm-4" style="vertical-align:middle;">
+							<a href="http://vulkan.gpuinfo.org" target="_blank"><img src="./images/vulkan.png" class="img-responsive"></a>
+						</div>
+						<div class="col-sm-4" style="vertical-align:middle;">
+							<a href="http://opengles.gpuinfo.org" target="_blank"><img src="./images/opengles.png" class="img-responsive"></a>
 						</div>
 					</div>
-					
-					<hr class="featurette-divider">					
-					
-					
-					<div class="row featurette">
-						<div class="col-md-7 col-md-push-5">
-							<h2 class="featurette-heading">OpenGL</h2>
-							<a href="http://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-gl">Reports online :&nbsp;</span></h3></a>
-							<p class="lead infotext">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="http://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-gl"> Reports online</span></h3></a>
+							<p class="lead infotext" style="text-align:justify;">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
 						</div>
-						<div class="col-md-5 col-md-pull-7">
-							<a href="http://opengl.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block" width="85%" src="./images/opengl.png" alt="Generic placeholder image"></a>
+						<div class="col-sm-4">
+							<h3> <span class="text-muted">Coming soon!</span></h3>
+							<p class="lead infotext" style="text-align:justify;"><a href="http://vulkan.io">Vulkan</a> is the new generation, open standard API for high-efficiency access to graphics and compute on modern GPUs, available on desktop and mobile platforms.</p>
 						</div>
-					</div>
-					
-					<hr class="featurette-divider">
-					
-					<div class="row featurette">
-						<div class="col-md-7 col-md-push-5">
-							<h2 class="featurette-heading">OpenGL ES</h2>
-							<a href="http://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles">Reports online :&nbsp;</span></h3></a>
-							<p class="lead infotext">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
+						<div class="col-sm-4">
+							<a href="http://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles"> Reports online</span></h3></a>
+							<p class="lead infotext" style="text-align:justify;">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
 						</div>
-						<div class="col-md-5 col-md-pull-7">
-							<a href="http://opengles.gpuinfo.org" target="_blank"><img class="featurette-image img-responsive center-block"  width="85%" src="./images/opengles.png" alt="Generic placeholder image"></a>
-						</div>
-					</div>
+					</div>					
+				</div>				
+				
+				<hr class="featurette-divider">
 					
-					<hr class="featurette-divider">
-									
-					<footer>
-						<!-- Trademarks -->	
-						<p align="center" class="copyrightexternal">Vulkan and the Vulkan logo are trademarks of the Khronos Group Inc.</p>
-						<p align="center" class="copyrightexternal">OpenGL® and the oval logo are trademarks or registered trademarks of Silicon Graphics, Inc. in the United States and/or other countries worldwide.</p>
-						<p align="center" class="copyrightexternal">OpenGL ES® is a registered trademark and the OpenGL ES logo is a trademark of Silicon Graphics Inc. used by permission by Khronos.</p>
-						<hr class="featurette-divider">
-						<p class="pull-right"><a href="#">Back to top</a></p>
-						<p>&copy; Copyright (c) 2015 by <a href="http://www.saschawillems.de">Sascha Willems</a></p>
-					</footer>
-					
+			<footer>
+				<!-- Trademarks -->	
+				<p align="center" class="copyrightexternal">Vulkan and the Vulkan logo are trademarks of the Khronos Group Inc.</p>
+				<p align="center" class="copyrightexternal">OpenGL® and the oval logo are trademarks or registered trademarks of Silicon Graphics, Inc. in the United States and/or other countries worldwide.</p>
+				<p align="center" class="copyrightexternal">OpenGL ES® is a registered trademark and the OpenGL ES logo is a trademark of Silicon Graphics Inc. used by permission by Khronos.</p>
+				<hr class="featurette-divider">
+				<center>
+				<div style='width:75%'>
+					Copyright (c) 2016 by <a href="http://www.saschawillems.de">Sascha Willems</a><br>
+					<a href="#">Back to top</a>
 				</div>
-				
-			</div>
+				</center>
+			</footer>
 			
 		</div>
 		
-		<script src="./external/jquery-2.1.4.min.js"></script>		
-		<script src="./external/bootstrap/js/bootstrap.min.js"></script>
-		
-		<script>
-			$(document).ready(function() {
-				// OpenGL report count
-				$.ajax({
-					url: "http://opengl.gpuinfo.org/services/gl_getreportcount.php",
-					type: "POST",
-					crossDomain: true,
-					dataType: "jsonp",
-					jsonp: false,
-					jsonpCallback: "jsoncallback",					
-					}).then(function(data) {
-					$('.reportcount-gl').append(data.count);
-					
-					// OpenGL ES report count
-					$.ajax({
-						url: "http://opengles.gpuinfo.org/services/getreportcount.php",
-						type: "POST",
-						crossDomain: true,
-						dataType: "jsonp",
-						jsonp: false,
-						jsonpCallback: "jsoncallback",					
-						}).then(function(data) {
-							$('.reportcount-gles').append(data.count);
-					});			
-					
-					
-				});
-			});
-		</script>		
-		
-	</body>
+	</div>
+	
+</div>
+
+<script src="./external/jquery-2.1.4.min.js"></script>		
+<script src="./external/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		// OpenGL report count
+		$.ajax({
+			url: "http://opengl.gpuinfo.org/services/gl_getreportcount.php",
+			type: "POST",
+			crossDomain: true,
+			dataType: "jsonp",
+			jsonp: false,
+			jsonpCallback: "jsoncallback",					
+			}).then(function(data) {
+			$('.reportcount-gl').before(data.count);
+			
+			// OpenGL ES report count
+			$.ajax({
+				url: "http://opengles.gpuinfo.org/services/getreportcount.php",
+				type: "POST",
+				crossDomain: true,
+				dataType: "jsonp",
+				jsonp: false,
+				jsonpCallback: "jsoncallback",					
+				}).then(function(data) {
+				$('.reportcount-gles').before(data.count);
+			});			
+			
+			
+		});
+	});
+</script>		
+
+</body>
 </html>
