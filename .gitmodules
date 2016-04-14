@@ -1,0 +1,9 @@
+[submodule "vulkan"]
+	path = vulkan
+	url = git://github.com/SaschaWillems/vulkan.gpuinfo.org
+[submodule "opengl"]
+	path = opengl
+	url = git://github.com/SaschaWillems/opengl.gpuinfo.org
+[submodule "opengles"]
+	path = opengles
+	url = git://github.com/SaschaWillems/opengles.gpuinfo.org
