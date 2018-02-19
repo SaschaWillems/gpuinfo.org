@@ -27,9 +27,10 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="http://opengl.gpuinfo.org">OpenGL</a></li>
-						<li><a href="http://opengles.gpuinfo.org">OpenGL ES</a></li> 
-						<li><a href="http://vulkan.gpuinfo.org">Vulkan</a></li> 
+						<li><a href="https://opengl.gpuinfo.org">OpenGL</a></li>
+						<li><a href="https://opengles.gpuinfo.org">OpenGL ES</a></li> 
+						<li><a href="https://vulkan.gpuinfo.org">Vulkan</a></li> 
+						<li><a href="https://android.gpuinfo.org">Android</a></li> 
 						<li><a href="./about.html">About</a></li> 
 					</ul>
 				</div>
@@ -48,26 +49,26 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-4" style="vertical-align:middle;">
-							<a href="http://opengl.gpuinfo.org" target="_blank"><img src="./images/opengl.png" class="img-responsive"></a>
+							<a href="https://opengl.gpuinfo.org" target="_blank"><img src="./images/opengl.png" class="img-responsive"></a>
 						</div>
 						<div class="col-sm-4" style="vertical-align:middle;">
-							<a href="http://vulkan.gpuinfo.org" target="_blank"><img src="./images/vulkan.png" class="img-responsive"></a>
+							<a href="https://vulkan.gpuinfo.org" target="_blank"><img src="./images/vulkan.png" class="img-responsive"></a>
 						</div>
 						<div class="col-sm-4" style="vertical-align:middle;">
-							<a href="http://opengles.gpuinfo.org" target="_blank"><img src="./images/opengles.png" class="img-responsive"></a>
+							<a href="https://opengles.gpuinfo.org" target="_blank"><img src="./images/opengles.png" class="img-responsive"></a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-4">
-							<a href="http://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-gl"> Reports online</span></h3></a>
+							<a href="https://opengl.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-gl"> Reports online</span></h3></a>
 							<p class="lead infotext" style="text-align:justify;">OpenGL® is a widely adopted 2D and 3D graphics API available on many desktop platforms. It features hundreds of extensions to support the latest GPU features.</p>
 						</div>
 						<div class="col-sm-4">
-							<h3> <span class="text-muted">Coming soon!</span></h3>
-							<p class="lead infotext" style="text-align:justify;"><a href="http://vulkan.io">Vulkan</a> is the new generation, open standard API for high-efficiency access to graphics and compute on modern GPUs, available on desktop and mobile platforms.</p>
+							<a href="https://vulkan.gpuinfo.org" target="_blank"><h3><span class="text-muted reportcount-vk"> Reports online</span></h3></a>
+							<p class="lead infotext" style="text-align:justify;"><a href="https://www.khronos.org/vulkan/">Vulkan</a> is the new generation, open standard API for high-efficiency access to graphics and compute on modern GPUs, available on desktop and mobile platforms.</p>
 						</div>
 						<div class="col-sm-4">
-							<a href="http://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles"> Reports online</span></h3></a>
+							<a href="https://opengles.gpuinfo.org" target="_blank"><h3> <span class="text-muted reportcount-gles"> Reports online</span></h3></a>
 							<p class="lead infotext" style="text-align:justify;">OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile space and available on almost any mobile device.</p>
 						</div>
 					</div>					
@@ -83,7 +84,7 @@
 				<hr class="featurette-divider">
 				<center>
 				<div style='width:75%'>
-					Copyright (c) 2016 by <a href="http://www.saschawillems.de">Sascha Willems</a><br>
+					Copyright (c) 2016-2018 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
 					<a href="#">Back to top</a>
 				</div>
 				</center>
@@ -100,9 +101,11 @@
 
 <script>
 	$(document).ready(function() {
+	
+
 		// OpenGL report count
 		$.ajax({
-			url: "http://opengl.gpuinfo.org/services/gl_getreportcount.php",
+			url: "https://opengl.gpuinfo.org/services/gl_getreportcount.php",
 			type: "POST",
 			crossDomain: true,
 			dataType: "jsonp",
@@ -113,14 +116,28 @@
 			
 			// OpenGL ES report count
 			$.ajax({
-				url: "http://opengles.gpuinfo.org/services/getreportcount.php",
+				url: "https://opengles.gpuinfo.org/services/getreportcount.php",
 				type: "POST",
 				crossDomain: true,
 				dataType: "jsonp",
 				jsonp: false,
 				jsonpCallback: "jsoncallback",					
 				}).then(function(data) {
-				$('.reportcount-gles').before(data.count);
+				$('.reportcount-gles').before(data.count);							
+				
+				// Vulkan report count
+				$.ajax({
+					url: "https://vulkan.gpuinfo.org/services/getreportcount.php",
+					type: "POST",
+					crossDomain: true,
+					dataType: "jsonp",
+					jsonp: false,
+					jsonpCallback: "jsoncallback",					
+					}).then(function(data) {
+					$('.reportcount-vk').before(data.count);							
+				});			
+				
+				
 			});			
 			
 			
