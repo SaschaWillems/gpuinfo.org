@@ -3,6 +3,19 @@ body {
   color: #5a5a5a;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  background-color: white;
+  max-width: 320px;
+  margin: 10px;
+  text-align: center;
+}
+
 .content {
 	padding-top:65px;
 }
