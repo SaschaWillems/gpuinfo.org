@@ -128,12 +128,8 @@
 				dataType: 'json',
 				crossDomain: true,
 				success: function (data) {
-					console.log(data);
 					$('.reportcount-vk').before(data.count);
-				},
-				failure: function (data) {
-					console.log(data);
-				},
+				}
 			});
 
 			// OpenGL report count
@@ -143,27 +139,19 @@
 				dataType: 'json',
 				crossDomain: true,
 				success: function (data) {
-					console.log(data);
 					$('.reportcount-gl').before(data.count);
-				},
-				failure: function (data) {
-					console.log(data);
-				},
+				}
 			});
 
-			// OpenGL report count
+			// OpenGL ES report count
 			$.ajax({
 				type: 'GET',
 				url: 'https://opengles.gpuinfo.org/api/v1/getreportcount.php',
 				dataType: 'json',
 				crossDomain: true,
 				success: function (data) {
-					console.log(data);
 					$('.reportcount-gles').before(data.count);
-				},
-				failure: function (data) {
-					console.log(data);
-				},
+				}
 			});
 
 		});
