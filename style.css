@@ -55,6 +55,7 @@ body {
 
 .infotext {
 	font-size: 16px;
+  text-align: justify;
 }
 
 .page-header {
