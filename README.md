@@ -3,13 +3,12 @@
 ## About
 <img src="/images/gpuinfo.png" width="256px">
 
-Source for the GPU hardware databases launch page over at http://www.gpuinfo.org
+Source for the GPU hardware databases launch page over at https://www.gpuinfo.org
 
 ## Externals
 - Bootstrap
 - jQuery
 
 ## Copyright stuff
-- Vulkan and the Vulkan logo are trademarks of the Khronos Group Inc.
-- OpenGL® and the oval logo are trademarks or registered trademarks of Silicon Graphics, Inc. in the United States and/or other countries worldwide.
-- OpenGL ES® is a registered trademark and the OpenGL ES logo is a trademark of Silicon Graphics Inc. used by permission by Khronos.
+- Khronos® and Vulkan® are registered trademarks of The Khronos Group Inc.
+- OpenGL® is a registered trademark and the OpenGL ES™ logo are trademarks of Hewlett Packard Enterprise, and OpenCL™ is a trademark of Apple Inc., used under license by Khronos.
