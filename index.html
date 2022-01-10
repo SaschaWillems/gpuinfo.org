@@ -28,9 +28,10 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
+					<li><a href="https://vulkan.gpuinfo.org">Vulkan</a></li>
+					<li><a href="https://opencl.gpuinfo.org">OpenCL</a></li>
 					<li><a href="https://opengl.gpuinfo.org">OpenGL</a></li>
 					<li><a href="https://opengles.gpuinfo.org">OpenGL ES</a></li>
-					<li><a href="https://vulkan.gpuinfo.org">Vulkan</a></li>
 					<li><a href="https://android.gpuinfo.org">Android</a></li>
 					<li><a href="./about.html">About</a></li>
 				</ul>
@@ -83,6 +84,16 @@
 							OpenGL ES is a 2D and 3D graphics API for embedded devices. It's widely used in the mobile
 							space and available on almost any mobile device.
 						</p>
+					</div>
+
+					<div class="flex-item">
+						<a href="https://opencl.gpuinfo.org" target="_blank"><img src="./images/opencl.png" class="img-responsive"></a>
+						<a href="https://opencl.gpuinfo.org" target="_blank">
+							<h3> <span class="text-muted reportcount-cl"> Reports online</span></h3>
+						</a>
+						<p class="lead infotext" style="text-align:justify;">
+							<a href="https://www.khronos.org/opencl/">OpenCL™</a> is an open standard for cross-platform, parallel programming of diverse accelerators found in supercomputers, cloud servers, personal computers, mobile devices and embedded platforms.
+						</p>
 					</div>					
 
 				</div>
@@ -93,17 +104,13 @@
 
 			<footer>
 				<!-- Trademarks -->
-				<p align="center" class="copyrightexternal">Vulkan and the Vulkan logo are trademarks of the Khronos
-					Group Inc.</p>
-				<p align="center" class="copyrightexternal">OpenGL® and the oval logo are trademarks or registered
-					trademarks of Silicon Graphics, Inc. in the United States and/or other countries worldwide.</p>
-				<p align="center" class="copyrightexternal">OpenGL ES® is a registered trademark and the OpenGL ES logo
-					is a trademark of Silicon Graphics Inc. used by permission by Khronos.</p>
+				<p align="center" class="copyrightexternal">Khronos® and Vulkan® are registered trademarks of The Khronos Group Inc.</p>
+				<p align="center" class="copyrightexternal">OpenGL® is a registered trademark and the OpenGL ES™ logo are trademarks of Hewlett Packard Enterprise, and OpenCL™ is a trademark of Apple Inc., used under license by Khronos.</p>
 				<hr class="featurette-divider">
 				<center>
 					<div style='width:75%'>
 						<a href="privacypolicy.html">Privacy policy</a><br /><br />
-						Copyright (c) 2016-2021 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
+						Copyright (c) 2016-2022 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
 						<a href="#">Back to top</a>
 					</div>
 				</center>
@@ -151,6 +158,17 @@
 				crossDomain: true,
 				success: function (data) {
 					$('.reportcount-gles').before(data.count);
+				}
+			});
+
+			// OpenCL report count
+			$.ajax({
+				type: 'GET',
+				url: 'https://opencl.gpuinfo.org/api/v1/getreportcount.php',
+				dataType: 'json',
+				crossDomain: true,
+				success: function (data) {
+					$('.reportcount-cl').before(data.count);
 				}
 			});
 
