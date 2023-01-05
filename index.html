@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a href="/">
-					<img src="./images/gpuinfo.png" height="48px">
+					<img class="site-logo" src="./images/gpuinfo.png" height="48px">
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -34,10 +34,13 @@
 					<li><a href="https://opengles.gpuinfo.org">OpenGL ES</a></li>
 					<li><a href="https://android.gpuinfo.org">Android</a></li>
 					<li><a href="./about.html">About</a></li>
+					<li><a href="#" onclick="toggleDarkMode()" title="Toggle dark/light themes"><img id="mode-toggle" class="mode-toggle" src="./images/moon.svg"/></a> </li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<script type="text/javascript" src="js/darkmode.js"></script>
 
 	<div class="site-wrapper content">
 
@@ -47,7 +50,8 @@
 
 				<div class="jumbotron">
 					<center>
-						<a href="about.html"><img src="./images/gpuinfo.png" class="img-responsive" width="320px"></a>
+						<a href="about.html"><img src="./images/gpuinfo.png" class="img-responsive site-logo" width="320px"></a>
+						<h4 style="padding-top: 20px;">Home of the community driven hardware databases for Khronos APIs.</h4>
 					</center>
 				</div>
 
@@ -87,7 +91,7 @@
 					</div>
 
 					<div class="flex-item">
-						<a href="https://opencl.gpuinfo.org" target="_blank"><img src="./images/opencl.png" class="img-responsive"></a>
+						<a href="https://opencl.gpuinfo.org" target="_blank"><img id="opencl-logo" src="./images/opencl.png" class="img-responsive"></a>
 						<a href="https://opencl.gpuinfo.org" target="_blank">
 							<h3> <span class="text-muted reportcount-cl"> Reports online</span></h3>
 						</a>
@@ -127,6 +131,8 @@
 
 	<script>
 		$(document).ready(function () {
+
+			loadDarkMode();
 
 			// Vulkan report count
 			$.ajax({

@@ -22,7 +22,7 @@
 			<span class="icon-bar"></span> 
 		  </button>
 		  <a href="https://www.gpuinfo.org">
-			<img src="./images/gpuinfo.png" height="48px">
+			<img class="site-logo" src="./images/gpuinfo.png" height="48px">
 		  </a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -33,13 +33,16 @@
 			<li><a href="https://opengles.gpuinfo.org">OpenGL ES</a></li>
 			<li><a href="https://android.gpuinfo.org">Android</a></li>
 			<li><a href="./about.html">About</a></li>
+			<li><a href="#" onclick="toggleDarkMode()" title="Toggle dark/light themes"><img id="mode-toggle" class="mode-toggle" src="./images/moon.svg"/></a> </li>
 		  </ul>
 		</div>
 	  </div>
 	</nav>	
+
+	<script type="text/javascript" src="js/darkmode.js"></script>
 		
 	<div class="panel panel-default content">
-		<div class="panel-body" style="margin-left:50px; width:65%px;">    
+		<div class="panel-body" style="margin-left:50px;">    
 			<h2>About GPUInfo.org</h2>
 			<div>
 				GPUInfo.org is a community-driven GPU hardware database for the open standards from <a href="https://www.khronos.org">Khronos</a>. The databases aim at developers wanting to know what features are supported by a driver/GPU combination or to check how widespread certain features are.<br/>
@@ -47,14 +50,14 @@
 				No profit is made from this data, nor is this data used in any commercial way and no personal data is transferred, stored or passed.<br><br>
 				All tools and databases are developed in the open source, sources can be found at <a href="https://github.com/SaschaWillems" target="_blank">GitHub</a>.
 			</div>
-			<h2>Donating</h2>
+			<!-- <h2>Donating</h2>
 			<div>
 				All of my tools and the databases itself are free-to-use, open source and hosted by me free of charge, feel free to donate ;)
 			</div>
 			<div>
 				<h3>PayPal</h3>
 				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=BHXPMV6ZKPH9E"><img alt="" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/></a>
-			</div>				
+			</div>				 -->
 		</div>
 	</div>		
 
@@ -66,7 +69,7 @@
 		<center>
 			<div style='width:75%'>
 				<a href="privacypolicy.html">Privacy policy</a><br /><br />
-				Copyright (c) 2016-2022 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
+				Copyright (c) 2016-2023 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
 				<a href="#">Back to top</a>
 			</div>
 		</center>
@@ -75,6 +78,12 @@
 		
 	<script src="./external/jquery-2.1.4.min.js"></script>		
 	<script src="./external/bootstrap/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			loadDarkMode();
+		});
+	</script>
 	
 	</body>
 </html>
