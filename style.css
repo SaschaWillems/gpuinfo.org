@@ -8,6 +8,7 @@
   --navbar-background-color: #f8f8f8;
   --navbar-border-color: #e7e7e7;  
   --logo-invert: 0;
+  --textcolor-nav: rgb(232, 230, 227);
 }
 
 [data-theme='dark'] {
@@ -15,11 +16,12 @@
   --backgroundcolor-nav: rgb(34, 34, 34);
   --backgroundcolor-jumbotron: rgb(25, 25, 25);
   --hr-color: rgb(32, 32, 32);
-  --textcolor: rgb(165, 165, 165);
+  --textcolor: rgb(175, 168, 158);
 	--mode-toggle-grayscale: 0.5;
   --navbar-background-color: rgb(34, 34, 34);
   --navbar-border-color: rgb(48, 48, 48);  
   --logo-invert: 1;
+  --textcolor-nav: rgb(232, 230, 227);
 }
 
 body {
@@ -43,6 +45,14 @@ hr {
 .navbar-default {
   background-color: var(--navbar-background-color);
   border-color: var(--navbar-border-color);
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: var(--textcolor-nav);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: var(--textcolor-nav);
 }
 
 .flex-container {
