@@ -8,7 +8,7 @@
   --navbar-background-color: #f8f8f8;
   --navbar-border-color: #e7e7e7;  
   --logo-invert: 0;
-  --textcolor-nav: rgb(232, 230, 227);
+  --textcolor-nav: #777;
 }
 
 [data-theme='dark'] {
