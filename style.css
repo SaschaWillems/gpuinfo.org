@@ -11,17 +11,19 @@
   --textcolor-nav: #777;
 }
 
-[data-theme='dark'] {
-  --backgroundcolor: rgb(17, 17, 17);
-  --backgroundcolor-nav: rgb(34, 34, 34);
-  --backgroundcolor-jumbotron: rgb(25, 25, 25);
-  --hr-color: rgb(32, 32, 32);
-  --textcolor: rgb(175, 168, 158);
-	--mode-toggle-grayscale: 0.5;
-  --navbar-background-color: rgb(34, 34, 34);
-  --navbar-border-color: rgb(48, 48, 48);  
-  --logo-invert: 1;
-  --textcolor-nav: rgb(232, 230, 227);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundcolor: rgb(17, 17, 17);
+    --backgroundcolor-nav: rgb(34, 34, 34);
+    --backgroundcolor-jumbotron: rgb(25, 25, 25);
+    --hr-color: rgb(32, 32, 32);
+    --textcolor: rgb(175, 168, 158);
+    --mode-toggle-grayscale: 0.5;
+    --navbar-background-color: rgb(34, 34, 34);
+    --navbar-border-color: rgb(48, 48, 48);  
+    --logo-invert: 1;
+    --textcolor-nav: rgb(232, 230, 227);
+  }
 }
 
 body {

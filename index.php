@@ -3,7 +3,7 @@
  *
  * GPU hardware database
  *
- * Copyright (C) 2016-2022 by Sascha Willems (www.saschawillems.de)
+ * Copyright (C) 2016-2023 by Sascha Willems (www.saschawillems.de)
  *
  * This code is free software, you can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public
@@ -71,7 +71,12 @@ require('header.php');
 				</div>
 
 				<div class="flex-item">
-					<a href="https://opencl.gpuinfo.org" target="_blank"><img id="opencl-logo" src="./images/opencl.png" class="img-responsive"></a>
+					<a href="https://opencl.gpuinfo.org" target="_blank">
+					<picture id="opencl-logo">
+						<source srcset="./images/opencl_white.svg" media="(prefers-color-scheme: dark)" class="img-responsive">
+						<img src="./images/opencl.png" class="img-responsive">
+					</picture>						
+				</a>
 					<a href="https://opencl.gpuinfo.org" target="_blank">
 						<h3> <span class="text-muted reportcount-cl"> Reports online</span></h3>
 					</a>
