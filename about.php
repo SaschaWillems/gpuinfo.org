@@ -41,20 +41,7 @@ require('header.php');
 	</div>
 </div>		
 
-<footer>
-	<!-- Trademarks -->
-	<p align="center" class="copyrightexternal">Khronos® and Vulkan® are registered trademarks of The Khronos Group Inc.</p>
-	<p align="center" class="copyrightexternal">OpenGL® is a registered trademark and the OpenGL ES™ logo are trademarks of Hewlett Packard Enterprise, and OpenCL™ is a trademark of Apple Inc., used under license by Khronos.</p>
-	<hr class="featurette-divider">
-	<center>
-		<div style='width:75%'>
-			<a href="privacypolicy.html">Privacy policy</a><br /><br />
-			Copyright (c) 2016-2023 by <a href="https://www.saschawillems.de">Sascha Willems</a><br>
-			<a href="#">Back to top</a>
-		</div>
-	</center>
-</footer>		
-
+<?php include('footer.php'); ?>
 	
 <script src="./external/jquery-2.1.4.min.js"></script>		
 <script src="./external/bootstrap/js/bootstrap.min.js"></script>
