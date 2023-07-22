@@ -1,6 +1,60 @@
+:root {
+  --backgroundcolor: #fff;
+  --backgroundcolor-nav: #fff;
+  --backgroundcolor-jumbotron: rgb(238, 238, 238);
+	--mode-toggle-grayscale: 0.75;
+  --textcolor: #5a5a5a;
+  --hr-color: rgb(238, 238, 238);
+  --navbar-background-color: #f8f8f8;
+  --navbar-border-color: #e7e7e7;  
+  --logo-invert: 0;
+  --textcolor-nav: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundcolor: rgb(17, 17, 17);
+    --backgroundcolor-nav: rgb(34, 34, 34);
+    --backgroundcolor-jumbotron: rgb(25, 25, 25);
+    --hr-color: rgb(32, 32, 32);
+    --textcolor: rgb(175, 168, 158);
+    --mode-toggle-grayscale: 0.5;
+    --navbar-background-color: rgb(34, 34, 34);
+    --navbar-border-color: rgb(48, 48, 48);  
+    --logo-invert: 1;
+    --textcolor-nav: rgb(232, 230, 227);
+  }
+}
+
 body {
+  background-color: var(--backgroundcolor);
   padding-bottom: 40px;
-  color: #5a5a5a;
+  color: var(--textcolor);
+}
+
+hr {
+  border-top: 1px solid var(--hr-color);
+}
+
+.jumbotron {
+  background-color: var(--backgroundcolor-jumbotron);
+}
+
+.site-logo {
+  filter: invert(var(--logo-invert));
+}
+
+.navbar-default {
+  background-color: var(--navbar-background-color);
+  border-color: var(--navbar-border-color);
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: var(--textcolor-nav);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: var(--textcolor-nav);
 }
 
 .flex-container {
@@ -10,7 +64,7 @@ body {
 }
 
 .flex-item {
-  background-color: white;
+  background-color: var(--backgroundcolor);
   max-width: 320px;
   margin: 10px;
   text-align: center;
@@ -65,4 +119,15 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: #FAFAFA;
+}
+
+.mode-toggle {
+	height: 20px;
+  position: relative;
+	filter: grayscale(var(--mode-toggle-grayscale));
+}
+
+.panel {
+  background-color: var(--backgroundcolor);
+  border: 0px;
 }
